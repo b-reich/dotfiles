@@ -1,0 +1,12 @@
+[user]
+	name = Benjamin Reich
+	email = dev@benjaminreich.de
+	signingkey = E7B3A082F8FFD2DB
+[color]
+	ui = auto
+[pull]
+	rebase = false
+[core]
+	editor = vim
+[commit]
+	gpgsign = true

@@ -8,5 +8,11 @@
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "terminal.integrated.fontSize": 18,
     "python.defaultInterpreterPath": "/home/benjamin/repos/venv/bin/python",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
     "workbench.iconTheme": "material-icon-theme",
 }

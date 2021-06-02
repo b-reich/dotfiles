@@ -15,4 +15,6 @@
         }
     ],
     "workbench.iconTheme": "material-icon-theme",
+    // "python.analysis.logLevel": "Trace"
+    "editor.formatOnSave": true
 }

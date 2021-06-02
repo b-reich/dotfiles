@@ -16,5 +16,6 @@
     ],
     "workbench.iconTheme": "material-icon-theme",
     // "python.analysis.logLevel": "Trace"
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black"
 }

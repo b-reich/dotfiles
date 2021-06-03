@@ -12,3 +12,5 @@
 	gpgsign = true
 [alias]
 	yolo = !git commit -m \"$(curl http://whatthecommit.com/index.txt)\"
+[init]
+	defaultBranch = main

@@ -8,14 +8,28 @@
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "terminal.integrated.fontSize": 18,
     "python.defaultInterpreterPath": "/home/benjamin/repos/venv/bin/python",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "workbench.iconTheme": "material-icon-theme",
     // "python.analysis.logLevel": "Trace"
-    "editor.formatOnSave": true,
-    "python.formatting.provider": "black"
+    // "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "python.formatting.provider": "black",
+    "workbench.startupEditor": "none",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false
+    },
+    "github.copilot.autocomplete.enable": true,
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open"
 }

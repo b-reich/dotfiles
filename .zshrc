@@ -9,6 +9,11 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin/:$PATH
 
+# Add Android SDK to PATH
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/benjamin/.oh-my-zsh"
@@ -18,7 +23,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ufw)
+plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ufw zsh-completions timewarrior)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -45,13 +50,15 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-autoload -Uz compinit
+#autoload -Uz compinit
 
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
+#for dump in ~/.zcompdump(N.mh+24); do
+#  compinit
+#done
 
-compinit -C
+#compinit -C
+
+autoload -U compinit && compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

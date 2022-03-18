@@ -31,5 +31,7 @@
     },
     "github.copilot.autocomplete.enable": true,
     "redhat.telemetry.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "latex-workshop.docker.enabled": true,
+    "latex-workshop.docker.image.latex": "docker.io/chillfre4k/latex"
 }

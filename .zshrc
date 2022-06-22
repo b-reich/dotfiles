@@ -16,14 +16,14 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/benjamin/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME=powerlevel10k/powerlevel10k
 #POWERLEVEL9K_MODE="nerdfont-complete"
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ufw zsh-completions timewarrior)
+plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ufw)
 
 source $ZSH/oh-my-zsh.sh
 

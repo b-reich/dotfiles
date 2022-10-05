@@ -1,7 +1,6 @@
 [user]
 	name = Benjamin Reich
 	email = dev@benjaminreich.de
-	signingkey = E7B3A082F8FFD2DB
 [color]
 	ui = auto
 [pull]
@@ -24,3 +23,5 @@
 	renames = copies
 [status]
 	showStash = true
+[push]
+	autoSetupRemote = true

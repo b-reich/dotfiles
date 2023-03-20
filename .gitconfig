@@ -4,7 +4,7 @@
 [color]
 	ui = auto
 [pull]
-	rebase = false
+	ff = only
 [core]
 	editor = vim
 [commit]

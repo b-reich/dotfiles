@@ -9,11 +9,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin/:$PATH
 
-# Add Android SDK to PATH
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
+# Brew Paths
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -23,18 +20,15 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ufw)
+plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
 # compile Flags
-export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch arm64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+#export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 alias ls='lsd'
 alias l='ls -l'
@@ -45,20 +39,12 @@ alias lt='ls --tree'
 alias t="todo.sh"
 
 alias vi="vim"
+alias vim="vim"
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi
-
-#autoload -Uz compinit
-
-#for dump in ~/.zcompdump(N.mh+24); do
-#  compinit
-#done
-
-#compinit -C
-
+autoload bashcompinit && bashcompinit
 autoload -U compinit && compinit
+
+source $(brew --prefix)/etc/bash_completion.d/az
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -66,3 +52,5 @@ autoload -U compinit && compinit
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uF408'
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

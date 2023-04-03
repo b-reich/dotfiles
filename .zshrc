@@ -20,6 +20,9 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 
 HIST_STAMPS="yyyy-mm-dd"
 
+zstyle :omz:plugins:ssh-agent quiet yes
+zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
+
 plugins=(git pip history-substring-search docker docker-compose colorize vscode git-flow-avh ansible git-auto-fetch command-not-found ssh-agent)
 
 source $ZSH/oh-my-zsh.sh

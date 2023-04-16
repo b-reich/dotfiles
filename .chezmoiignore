@@ -1,0 +1,5 @@
+{{ if ne .chezmoi.os "linux" }}
+.config/i3
+.config/i3status-rust
+.config/rofi
+{{ end }}

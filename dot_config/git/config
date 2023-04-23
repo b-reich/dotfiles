@@ -16,7 +16,7 @@
 
 	puff = push -u --force-with-lease
 	s = status --short --branch
-	yolo = !git commit -m \"$(curl http://whatthecommit.com/index.txt)\"
+	yolo = !git commit -m \"$(curl https://whatthecommit.com/index.txt)\"
 [init]
 	defaultBranch = main
 [diff]

@@ -34,18 +34,21 @@ HIST_STAMPS="yyyy-mm-dd"
 ## OMZ Stuff
 zstyle ':omz:update' mode reminder # just notify to update it via chezmoi
 plugins=(
-  git
-  pip
-  history-substring-search
+  ansible 
+  argocd
+  colorize
+  command-not-found
   docker
   docker-compose
-  colorize
-  vscode
-  git-flow-avh
-  ansible 
+  git
   git-auto-fetch
-  command-not-found
+  git-flow-avh
+  gitignore
+  history-substring-search
+  pip
+  pipenv
   ssh-agent
+  vscode
 )
 
 source $ZSH/oh-my-zsh.sh

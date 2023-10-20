@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin/:$PATH
 
-zstyle :omz:plugins:ssh-agent quiet yes
+#zstyle :omz:plugins:ssh-agent quiet yes
 
 {{ if eq .chezmoi.os "darwin" -}}
 
@@ -18,7 +18,7 @@ export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # MacOS ssh stuff
-#zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
+zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
 
 {{ end -}}
 

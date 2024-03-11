@@ -17,6 +17,8 @@ zstyle :omz:plugins:ssh-agent quiet yes
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
+export HOMEBREW_NO_ENV_HINTS=false
+
 # MacOS ssh stuff
 zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
 

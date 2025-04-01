@@ -61,6 +61,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+autoload bashcompinit && bashcompinit
+autoload -U compinit && compinit
+
 # compile Flags
 export ARCHFLAGS="-arch {{ .chezmoi.arch }}"
 
@@ -81,6 +84,3 @@ alias k="kubectl"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-autoload bashcompinit && bashcompinit
-autoload -U compinit && compinit

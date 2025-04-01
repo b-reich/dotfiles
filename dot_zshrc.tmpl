@@ -15,6 +15,8 @@ zstyle :omz:plugins:ssh-agent quiet yes
 {{ if eq .chezmoi.os "darwin" -}}
 
 # Brew Paths
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
@@ -80,5 +82,5 @@ alias k="kubectl"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-#autoload bashcompinit && bashcompinit
-#autoload -U compinit && compinit
+autoload bashcompinit && bashcompinit
+autoload -U compinit && compinit
